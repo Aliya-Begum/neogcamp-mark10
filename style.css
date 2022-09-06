@@ -1,7 +1,107 @@
-#bill-amount{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+:root{
+    /* --heading-color : #7e22ce; */
+    --heading-color : white;
+}
+body{
+    background-image: url(/images/bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: 301vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#header{
+    margin: 3rem;
+    text-align: center;
+    color: var(--heading-color);
+}
+
+#head-para{
+    text-align: center;
+    margin: 2rem 0;
+    color: whitesmoke
+}
+
+.label{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    margin: 1rem;
+    color: white;
+}
+
+.text-input{
+    margin: 1rem;
+    display: block;
+    margin: auto;
+    width: 13rem;
+    padding: 0.6rem 1rem;
+    border: black solid 2px;
+    border-radius: 0.7rem;
+}
+
+#check-button{
+    cursor:pointer;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    border: var(--heading-color) solid 2px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.7rem ;
+    background-color: black;
+    color: white;
+}
+
+#error-message{
+    color: red; 
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#table-caption{
+    display: block;
+    text-align: center;
+    margin: auto;
     margin: 1rem;
 }
 
-#cash-given{
-    margin:1rem;
+table, th, td{
+    border: solid 2px var(--heading-color);
+    border-collapse: collapse;
+    
 }
+
+.caption-head{
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+#center{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.table-row{
+    margin-top: 1rem;
+}
+
+th, td{
+    color: white;
+    column-width: 57px;
+    padding: 0.4rem 0.5rem;
+}
+
+
+
+
+
+
+

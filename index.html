@@ -10,33 +10,33 @@
 </head>
 
 <body>
-    <h1>Cash Register</h1>
-    <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+    <h1 id="header">Cash Register Manager</h1>
+    <p id="head-para">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
     <div>
-        <label for="bill-amount">Bill Amount:</label>
-        <input type="number" id="bill-amount">
+        <label class="label" for="bill-amount">Bill Amount:</label>
+        <input placeholder="please enter the bill amount" type="number" id="bill-amount" class="text-input">
     </div>
 
     <div>
-        <label for="cash-given">Cash-Given:</label>
-        <input type="number" id="cash-given">
+        <label class="label" for="cash-given">Cash-Given:</label>
+        <input placeholder="please enter the given cash" type="number" id="cash-given" class="text-input">
     </div>
     <div>
         <button id="check-button">Check</button>
-        
-        <table>
-            <caption>Retrun Change</caption>
-            <tr>
+        <p id="error-message"></p>
+        <table id="center">
+            <caption class="caption-head" >Retrun Change</caption>
+            <tr class="table-row">
                 <th>No of Notes</th>
-                <td class="available-notes"></td>
-                <td class="available-notes"></td>
-                <td class="available-notes"></td>
-                <td class="available-notes"></td>
-                <td class="available-notes"></td>
-                <td class="available-notes"></td>
-                <td class="available-notes"></td>
+                <td class="no-of-notes "></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
             </tr>
-            <tr>
+            <tr class="table-row">
                 <th>Note</th>
                 <td>2000</td>
                 <td>500</td>
