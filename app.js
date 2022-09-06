@@ -4,9 +4,7 @@ var btnCheck = document.querySelector("#check-button");
 var errMessage = document.querySelector("#error-message");
 var numberOfNotes = document.querySelectorAll(".no-of-notes");
 
-
 var availableNotes = [2000, 500, 100, 20, 10, 5, 1];
-
 
 btnCheck.addEventListener("click", function checkClickHandler() {
     errMessage.style.display = "none";
@@ -14,7 +12,6 @@ btnCheck.addEventListener("click", function checkClickHandler() {
         if(cashGiven.value>=billAmount.value){
            var amountToBeReturned = cashGiven.value - billAmount.value;
            calculateNoOfNotes(amountToBeReturned);
-
         }
         else{
             showErrorMessage("cash given should atleast be greater than or equal to bill amount");
