@@ -6,21 +6,29 @@ var numberOfNotes = document.querySelectorAll(".no-of-notes");
 
 var availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
-btnCheck.addEventListener("click", function checkClickHandler() {
+
+function checkClickHandler(){
     errMessage.style.display = "none";
-    if (billAmount.value > 0) {
-        if(cashGiven.value >= billAmount.value){
-           var amountToBeReturned = cashGiven.value - billAmount.value;
-           calculateNoOfNotes(amountToBeReturned);
+    var billAmt = Number(billAmount.value);
+    var cash = Number(cashGiven.value);
+    if(billAmt && cash){
+        if(billAmt> 0 && cash>0){
+            if(billAmt <= cash){
+                var amountToBeReturned = cash - billAmt;
+                calculateNoOfNotes(amountToBeReturned);
+            }
+            else{
+                showErrorMessage("cash given should be greater than or eqaul to bil amount");
+             }
         }
         else{
-            showErrorMessage("cash given should atleast be greater than or equal to bill amount");
+            showErrorMessage("bill amount or cash given can not be less than or equal to 0.")
         }
     }
-    else {
-       showErrorMessage("bill amount should be greater than zero");
+    else{
+        showErrorMessage("Please enter both the fields");
     }
-})
+}
 
 function showErrorMessage (message){
     errMessage.style.display = "block";
@@ -28,9 +36,11 @@ function showErrorMessage (message){
 }
 
 function calculateNoOfNotes(amountToBeReturned){
-    for(let i= 0; availableNotes.length; i++){
+    for(let i= 0; i<availableNotes.length; i++){
         var noOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
         amountToBeReturned = amountToBeReturned % availableNotes[i];
         numberOfNotes[i].innerText = noOfNotes; 
     }
 }
+
+btnCheck.addEventListener('click', checkClickHandler);
