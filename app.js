@@ -26,7 +26,7 @@ function checkClickHandler(){
         }
     }
     else{
-        showErrorMessage("Please enter both the fields");
+        showErrorMessage("Please fill out both the fields");
     }
 }
 
